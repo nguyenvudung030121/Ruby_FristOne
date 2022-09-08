@@ -7,5 +7,12 @@ puts "Số nhập vào #{number_1} - #{number_2} "
 if number_1 > number_2 
     puts "So lon nhat la #{number_1} "
 else
-    puts "So lon nhat la #{number_2} "
+    puts "So lon nhat la #{number_2} " 
 end
+
+def helloWorld(name =  "World")
+    puts("Xin chào #{name} !")
+end
+
+helloWorld
+helloWorld "Vu Dung" 
