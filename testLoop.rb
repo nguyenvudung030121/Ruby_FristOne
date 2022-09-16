@@ -4,7 +4,7 @@
 end
 
 ###################
-for i in 0..5
+for i in 0..10
    puts "Giá trị của biến i là: #{i}"
 end
 
@@ -27,3 +27,10 @@ counter = 0
 begin
    puts "Giá trị của biến counter là #{counter += 1}"
 end while counter > 5
+
+car = {}
+car["name"] = "bmw"
+car["year"] = "2013"
+car["price"] = "$4000"
+
+p car.values
