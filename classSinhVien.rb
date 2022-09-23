@@ -7,12 +7,17 @@ class SinhVien
     @diemToan
     @diemLy
     @diemHoa
-    def initialize(msv,ten,lop)
-        @msv = msv
-        @ten = ten
-        @lop = lop
+    @avg_point
+    def initialize(id,name,classmate,phone,address)
+        @id = id
+        @name = name
+        @class = classmate
+        @phone = phone
+        @address = address
+
     end
-    def nhapDiem
+
+    def input_Grade
         print "Nhap vao diem toan: "
         @diemToan = gets.to_f
         print "Nhap vao diem ly: "
@@ -21,15 +26,23 @@ class SinhVien
         @diemHoa = gets.to_f      
     end 
 
+    
 
-    def inThongTin
-        puts "\n\nThong Tin SV: Hoten: #{@ten} , MSV: #{@msv}, Lop, #{@lop}"
+    def avg_Grade
+        @avg_point = (@diemHoa+@diemLy+@diemToan)/3
+    end
+        
+
+    def get_info
+        puts "\n\nThong Tin SV:\n Name: #{@name} , Id: #{@id}, Class: #{@classmate}, Phone: #{@phone}, Address: #{@address}"
         puts "Diem Sinh Vien:  Toan: #{@diemToan} , Ly: #{@diemLy} , Hoa:  #{@diemHoa}"
-        puts "Diem TB: #{(@diemHoa+@diemLy+@diemToan)/3}"
+        avg_Grade
+        puts "Diem TB: #{@avg_point}"
     end 
 end
 
 
-sv2 = SinhVien.new('1911505310109','Vu Dung','19T1')
-sv2.nhapDiem
-sv2.inThongTin
+
+# sv2 = SinhVien.new('1911505310109','Vu Dung','19T1','0122111233','Da Nang')
+# sv2.input_Grade
+# sv2.get_info
