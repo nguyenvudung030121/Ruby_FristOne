@@ -143,7 +143,7 @@ while (true)
         end
 
     when 2
-        p "-------DANH SACH TAI LIEU-----------"
+        p "-------DANH SACH PHUONG TIEN-----------"
         qlptgt.inDS
     when 3
         p "------XOA PHUONG TIEN THEO ID---------"
