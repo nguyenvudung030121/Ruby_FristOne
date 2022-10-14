@@ -71,8 +71,48 @@ class PhanSo
 
 end
 
-phanso1 = PhanSo.new(1,2)
-phanso2 = PhanSo.new(2,3)
+def checkZero(num)
+    if num == 0 
+        return true
+    end
+    return false
+end
+
+
+p('--------PHAN SO I--------')
+print('Nhap tu so: ')
+ts1 = gets.to_f
+while (true)
+    print('Nhap mau so: ')
+    ms1 = gets.to_f
+
+    if(checkZero(ms1) == true)
+        p "Mau so phai khac 0"
+    else 
+        break
+    end
+
+end
+
+
+p('--------PHAN SO II--------')
+print('Nhap tu so: ')
+ts2 = gets.to_f
+print('Nhap mau so: ')
+while (true)
+    print('Nhap mau so: ')
+    ms2 = gets.to_f
+
+    if(checkZero(ms2) == true)
+        p "Mau so phai khac 0"
+    else 
+        break
+    end
+
+end
+
+phanso1 = PhanSo.new(ts1,ms1)
+phanso2 = PhanSo.new(ts2,ms2)
 
 p phanso1+phanso2
 p phanso1-phanso2
